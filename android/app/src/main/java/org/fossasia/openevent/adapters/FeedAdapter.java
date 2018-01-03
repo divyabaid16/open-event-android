@@ -77,11 +77,7 @@ public class FeedAdapter extends BaseRVAdapter<FeedItem, FeedAdapter.RecyclerVie
         super(feedItems);
         this.feedItems = feedItems;
         this.context = context;
-        try {
-            this.mAdapterCallback = adapterCallback;
-        } catch (ClassCastException e) {
-            throw new ClassCastException("Activity must implement AdapterCallback.");
-        }
+        this.mAdapterCallback = adapterCallback;
     }
 
     @Override
